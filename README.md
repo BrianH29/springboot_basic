@@ -4,6 +4,7 @@
 - [x] mysql connection
 - [x] jpa repository setup
 - [x] simple student class entity
-- [ ] REST api
+- [x] REST api
+- [x] test with postman
 
 [reference amigoscode.com](https://amigoscode.com/p/spring-boot)
