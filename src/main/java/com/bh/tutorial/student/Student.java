@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 @Entity
 @Table
@@ -28,12 +29,17 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob;
+
+    @Transient // Transient = 해당 필드를 데이터 베이스에 매핑 시키지 않는다.
     private Integer age;
 
-    public Student(String name, String email, LocalDate dob, Integer age) {
+    public Student(String name, String email, LocalDate dob) {
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
+    }
+
+    public Integer getAge() {
+        return Period.between(this.dob, LocalDate.now()).getYears();
     }
 }
