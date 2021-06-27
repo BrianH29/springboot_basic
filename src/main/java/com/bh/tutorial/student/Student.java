@@ -1,9 +1,6 @@
 package com.bh.tutorial.student;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,6 +11,7 @@ import java.time.LocalDate;
 @Setter
 @ToString
 @AllArgsConstructor
+@NoArgsConstructor
 public class Student {
 
     @Id
@@ -32,10 +30,10 @@ public class Student {
     private LocalDate dob;
     private Integer age;
 
-    public Student(Long id, String name, String email, LocalDate dob) {
-        this.id = id;
+    public Student(String name, String email, LocalDate dob, Integer age) {
         this.name = name;
         this.email = email;
         this.dob = dob;
+        this.age = age;
     }
 }
