@@ -6,4 +6,4 @@
 - [x] simple student class entity
 - [ ] REST api
 
-[reference amigoscode.com] (https://amigoscode.com/p/spring-boot)
+[reference amigoscode.com](https://amigoscode.com/p/spring-boot)
